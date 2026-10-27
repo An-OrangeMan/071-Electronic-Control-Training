@@ -91,9 +91,9 @@ int main(void)
   /* USER CODE BEGIN 2 */
 	
 
-	OLED_Init();
-	OLED_Clear();
-	OLED_ShowString(0,0,"Hello World",16);
+//	OLED_Init();
+//	OLED_Clear();
+//	OLED_ShowString(0,0,"Hello World",16);
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -101,10 +101,11 @@ int main(void)
   while (1)
   {
     /* USER CODE END WHILE */
-		HAL_GPIO_WritePin (GPIOC,GPIO_PIN_13,GPIO_PIN_RESET);
+		HAL_GPIO_WritePin (GPIOC,GPIO_PIN_13,GPIO_PIN_RESET);//µ„µ∆
+		HAL_Delay(500);//—” ±500ms
+		HAL_GPIO_WritePin (GPIOC,GPIO_PIN_13,GPIO_PIN_SET)£ª
 		HAL_Delay(500);
-		HAL_GPIO_WritePin (GPIOC,GPIO_PIN_13,GPIO_PIN_SET);
-		HAL_Delay(500);
+
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */
